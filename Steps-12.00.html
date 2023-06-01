@@ -1,0 +1,341 @@
+
+Create Date table and Relationship
+12
+<p><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1139/4/1.jpg" style="width: 252.701px; height: 535.957px;"><br></p><p><br></p><p><br></p><p><br></p><p>Use the following to create the date table</p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">Date Dax</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676"><br></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">Date = </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB">ADDCOLUMNS</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676"> (<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB">CALENDAR</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676"> (</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB">Min</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080">'AirCrashFatalities'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">), </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">MAX</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">(</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">'AirCrashFatalities'[Date]</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676">)),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"DateAsInteger"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#A31515">"YYYYMMDD"</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"Year"</span><span style="font-size:9.0pt;font-family:
+Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB">YEAR</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676"> ( </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080">[Date]</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"Monthnumber"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#A31515">"MM"</span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"YearMonthnumber"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#A31515">"YYYY/MM"</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"YearMonthShort"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#A31515">"YYYY/mmm"</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"MonthNameShort"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#A31515">"mmm"</span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"MonthNameLong"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#A31515">"mmmm"</span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"DayOfWeekNumber"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">WEEKDAY</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"DayOfWeek"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#A31515">"dddd"</span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"DayOfWeekShort"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#A31515">"ddd"</span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"Quarter"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#A31515">"Q"</span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> &amp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#A31515">"Q"</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515">"YearQuarter"</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#A31515">"YYYY"</span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ) &amp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#A31515">"/Q"</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> &amp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB">FORMAT</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> ( </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080">[Date]</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676">, </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#A31515">"Q"</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"> )</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"><o:p><br></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#767676"><o:p><br></o:p></span></p><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="background-color: rgb(255, 255, 255);">Follow the Gif below</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><span style="background-color: rgb(255, 255, 255);"><br></span><br></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt;background:#FFFFFE"><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1139/3/1.gif" style="width: 758.99px; height: 407.556px;"><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#767676"><br></span></p>
+
+<p>Link to create date table and relationship</p><p><a href="https://www.datacamp.com/tutorial/how-to-create-date-tables-in-power-bi-tutorial" target="_blank"><font color="#9c9c94">https://www.datacamp.com/tutorial/how-to-create-date-tables-in-power-bi-tutorial</font></a><br></p>
+
